@@ -1,19 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:orientation="horizontal">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前WDAudio状态为："
+            android:textColor="#191919"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:textColor="#493949"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_start_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="doStartRecord"
+        android:text="开始录制"
+        android:textColor="#191919"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/btn_stop_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="doStopRecord"
+        android:text="结束录制"
+        android:textColor="#191919"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/btn_play_pcm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="doPlayPCM"
+        android:text="播放PCM"
+        android:textColor="#191919"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/btn_play_wav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="doPlayWAV"
+        android:text="播放WAV"
+        android:textColor="#191919"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/btn_stop_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="doStopPlay"
+        android:text="停止播放"
+        android:textColor="#191919"
+        android:textSize="24sp"/>
+</LinearLayout>
